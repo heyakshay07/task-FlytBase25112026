@@ -34,6 +34,11 @@ python -m drone_analyst chat            # ask follow-up questions (blank line to
 python -m pytest -q                     # 46 tests
 ```
 
+For a hosted deployment such as Render, use `python -m drone_analyst.web` as the start
+command. It listens on the platform's `PORT`, serves a browser interface at `/`, and accepts
+`POST /ask` with `{"question": "..."}`. The interactive `chat` command requires a terminal and
+is intended for local use.
+
 The persistence test uses a unique temporary directory inside `output/`, so it does not rely on
 pytest's default Windows temp directory. A cache permission warning from `.pytest_cache` may still
 appear; it does not fail the tests.
