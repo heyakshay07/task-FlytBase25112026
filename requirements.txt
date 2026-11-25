@@ -1,0 +1,15 @@
+# Core pipeline, index, rules, Q&A and tests need NOTHING beyond the Python standard library (3.10+; SQLite with FTS5 is bundled in CPython builds)
+pytest>=7.0
+
+# Optional: LangGraph/LangChain agent with Groq (drone_analyst/llm_agent.py)
+langchain-core>=0.3
+langgraph>=0.2
+langchain-groq>=0.2
+
+# Optional: real-video captioning bridge (drone_analyst/vlm.py)
+# opencv-python
+# transformers
+# torch
+# pillow
+
+# Optional report generation: pip install reportlab pillow

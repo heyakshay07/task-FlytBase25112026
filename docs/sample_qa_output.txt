@@ -1,0 +1,43 @@
+Q: show all truck events
+9 frame(s) matching 'truck':
+  07:45 @Main Gate: Blue Ford F150 enters through main gate.
+  07:46 @Garage: Blue Ford F150 parked at garage, driver exits vehicle.
+  08:30 @Main Gate: Blue Ford F150 leaves through main gate.
+  11:58 @Main Gate: Blue Ford F150 enters through main gate.
+  12:00 @Garage: Blue Ford F150 parked at garage.
+  12:40 @Main Gate: Blue Ford F150 exits through main gate.
+  19:00 @Main Gate: Blue Ford F150 enters through main gate.
+  19:02 @Garage: Blue Ford F150 parked at garage.
+  23:30 @Garage: Garage door closed. Blue Ford F150 parked. No activity.
+
+Q: how many times did the blue truck enter
+Blue Ford F150 entered 3 time(s): 07:45-08:30, 11:58-12:40, 19:00.
+
+Q: what objects were in the video
+Persons: person in dark hoodie (3 frames, 00:01-00:03); driver (1 frame, 07:46-07:46); courier in white uniform (2 frames, 09:10-09:14); gardener in green uniform (1 frame, 10:00-10:00); person in black jacket (3 frames, 16:20-16:22)
+Animals: fox (1 frame, 00:05-00:05)
+Vehicles: blue ford f150 (9 frames, 07:45-23:30); white delivery van (2 frames, 09:10-09:18); red honda civic (1 frame, 14:00-14:00); black suv (3 frames, 22:30-23:10)
+Objects: ladder (1 frame, 16:20-16:20)
+
+Q: any critical alerts
+2 alert(s):
+  [CRITICAL] Person climbing at Perimeter Fence (possible intrusion), 16:20.
+  [CRITICAL] Person tampering with property at Backyard, 16:22.
+
+Q: what happened between 00:00 and 01:00
+6 frame(s) matching from 00:00 to 01:00:
+  00:00 @Main Gate: Empty driveway, gate closed. No activity.
+  00:01 @Main Gate: Person in dark hoodie loitering near main gate, looking at the lock.
+  00:02 @Main Gate: Person in dark hoodie standing at main gate, checking phone.
+  00:03 @Main Gate: Person in dark hoodie walking away from main gate toward the road.
+  00:05 @Perimeter Fence: Fox crossing the lawn near the fence. Nothing else visible.
+  00:15 @Garage: Garage door closed. No activity.
+
+Q: someone trying to break in
+Closest matching frames:
+  16:22 @Backyard: Person in black jacket tampering with back door.
+  16:20 @Perimeter Fence: Person in black jacket climbing over perimeter fence with a ladder.
+  16:21 @Backyard: Person in black jacket running toward backyard.
+  00:02 @Main Gate: Person in dark hoodie standing at main gate, checking phone.
+  00:03 @Main Gate: Person in dark hoodie walking away from main gate toward the road.
+

@@ -1,0 +1,57 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0 -- /usr/bin/python
+cachedir: .pytest_cache
+rootdir: /home/claude/drone-security-analyst
+configfile: pytest.ini
+testpaths: tests
+plugins: platformdirs-4.13.0, anyio-4.16.0, langsmith-0.16.1
+collecting ... collected 46 items
+
+tests/test_indexing_and_qa.py::test_sample_log_lines PASSED              [  2%]
+tests/test_indexing_and_qa.py::test_sample_alert PASSED                  [  4%]
+tests/test_indexing_and_qa.py::test_every_frame_indexed_with_telemetry PASSED [  6%]
+tests/test_indexing_and_qa.py::test_query_by_object_truck PASSED         [  8%]
+tests/test_indexing_and_qa.py::test_query_by_time_range_and_wraparound_night PASSED [ 10%]
+tests/test_indexing_and_qa.py::test_query_by_location_and_combined_filters PASSED [ 13%]
+tests/test_indexing_and_qa.py::test_full_text_and_semantic_search PASSED [ 15%]
+tests/test_indexing_and_qa.py::test_visit_tracking_three_entries PASSED  [ 17%]
+tests/test_indexing_and_qa.py::test_qa_how_many_times PASSED             [ 19%]
+tests/test_indexing_and_qa.py::test_qa_objects_in_video PASSED           [ 21%]
+tests/test_indexing_and_qa.py::test_qa_alert_filters PASSED              [ 23%]
+tests/test_indexing_and_qa.py::test_qa_time_range_and_last_seen PASSED   [ 26%]
+tests/test_indexing_and_qa.py::test_qa_summary_is_one_sentence_plus_details PASSED [ 28%]
+tests/test_indexing_and_qa.py::test_context_stays_bounded_and_tracks_on_site PASSED [ 30%]
+tests/test_indexing_and_qa.py::test_empty_agent_summary PASSED           [ 32%]
+tests/test_indexing_and_qa.py::test_persistence_roundtrip PASSED         [ 34%]
+tests/test_llm_tools.py::test_tools_return_grounded_data PASSED          [ 36%]
+tests/test_llm_tools.py::test_llm_agent_requires_key PASSED              [ 39%]
+tests/test_perception.py::test_blue_ford_f150_logged_as_truck PASSED     [ 41%]
+tests/test_perception.py::test_same_truck_different_wording_same_entity PASSED [ 43%]
+tests/test_perception.py::test_person_with_clothing_descriptor_and_loitering PASSED [ 45%]
+tests/test_perception.py::test_no_activity_frames_produce_no_detections PASSED [ 47%]
+tests/test_perception.py::test_negation_suppresses_person PASSED         [ 50%]
+tests/test_perception.py::test_plate_becomes_identity PASSED             [ 52%]
+tests/test_perception.py::test_count_and_suspicious_object PASSED        [ 54%]
+tests/test_perception.py::test_courier_leaving_package_is_not_exiting PASSED [ 56%]
+tests/test_perception.py::test_driver_exits_vehicle_is_not_vehicle_exit PASSED [ 58%]
+tests/test_perception.py::test_vehicle_categories[white delivery van arrives-van] PASSED [ 60%]
+tests/test_perception.py::test_vehicle_categories[black SUV idling-suv] PASSED [ 63%]
+tests/test_perception.py::test_vehicle_categories[red motorcycle parked-bike] PASSED [ 65%]
+tests/test_perception.py::test_vehicle_categories[Tesla Model 3 enters-car] PASSED [ 67%]
+tests/test_rules_and_alerts.py::test_person_loitering_at_midnight_triggers_high_alert PASSED [ 69%]
+tests/test_rules_and_alerts.py::test_same_loitering_by_day_is_only_medium PASSED [ 71%]
+tests/test_rules_and_alerts.py::test_dwell_based_loitering_without_keyword PASSED [ 73%]
+tests/test_rules_and_alerts.py::test_dwell_resets_after_gap PASSED       [ 76%]
+tests/test_rules_and_alerts.py::test_unknown_vehicle_at_night_high_but_resident_not_flagged PASSED [ 78%]
+tests/test_rules_and_alerts.py::test_resident_truck_at_night_is_not_unknown PASSED [ 80%]
+tests/test_rules_and_alerts.py::test_vehicle_leaving_at_night_not_flagged PASSED [ 82%]
+tests/test_rules_and_alerts.py::test_repeat_vehicle_alert_on_second_entry_same_day PASSED [ 84%]
+tests/test_rules_and_alerts.py::test_repeat_counter_resets_next_day PASSED [ 86%]
+tests/test_rules_and_alerts.py::test_climbing_is_critical_and_beats_restricted_zone PASSED [ 89%]
+tests/test_rules_and_alerts.py::test_person_in_restricted_zone_daytime PASSED [ 91%]
+tests/test_rules_and_alerts.py::test_animal_triggers_nothing PASSED      [ 93%]
+tests/test_rules_and_alerts.py::test_cooldown_suppresses_repeats_but_allows_escalation PASSED [ 95%]
+tests/test_rules_and_alerts.py::test_telemetry_alerts PASSED             [ 97%]
+tests/test_rules_and_alerts.py::test_healthy_telemetry_is_silent PASSED  [100%]
+
+============================== 46 passed in 0.77s ==============================

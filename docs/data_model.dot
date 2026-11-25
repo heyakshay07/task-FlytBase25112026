@@ -1,0 +1,9 @@
+digraph D {
+  rankdir=LR; fontname="Helvetica"; node [fontname="Helvetica", fontsize=10, shape=record, style=filled, fillcolor="#FFF6DD", color="#B08A2E"];
+  frames [label="{frames|id PK\lts (ISO, indexed)\llocation (indexed)\lx, y, altitude, battery\lspeed, heading\ldescription\l}"];
+  det [label="{detections|id PK\lframe_id FK\lkind, category (indexed)\llabel\lentity_key (indexed)\lactivity, count, attrs(JSON)\l}"];
+  visits [label="{visits|entity_key + visit_no PK\llabel, category, day\lstart_ts, end_ts\l}"];
+  alerts [label="{alerts|id PK\lframe_id FK\lts (indexed)\lrule, severity\lmessage, location\lentity_key\l}"];
+  fts [label="{frames_fts (FTS5)|description\l}", fillcolor="#E6F4EA", color="#3C8D5A"];
+  frames -> det [label="1..n"]; frames -> alerts [label="0..n"]; frames -> fts [label="rowid"]; det -> visits [label="entity_key", style=dashed];
+}

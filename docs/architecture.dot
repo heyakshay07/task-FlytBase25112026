@@ -1,0 +1,21 @@
+digraph G {
+  rankdir=TB; nodesep=0.35; ranksep=0.5; fontname="Helvetica"; node [fontname="Helvetica", fontsize=11, shape=box, style="rounded,filled", fillcolor="#EEF3FA", color="#4A6FA5"];
+  edge [fontname="Helvetica", fontsize=9, color="#555555"];
+  subgraph cluster_in { label="Inputs (simulated)"; style=dashed; color="#999999";
+    tel [label="Telemetry\nlocation, x/y, altitude,\nbattery, speed"]; vid [label="Video frames\n(text captions;\nreal VLM via vlm.py)"]; }
+  feed [label="JSONL feed\n(one record per frame)", fillcolor="#FFF6DD"];
+  per [label="Perception\nTextPerceiver\nobjects + activities\n+ stable entity keys"];
+  ctx [label="Context manager\nentity registry, dwell timers,\nrolling window, hourly digests", fillcolor="#E6F4EA", color="#3C8D5A"];
+  rules [label="Rule engine\n7 rules, per-zone collapse,\ncooldown + escalation", fillcolor="#FDE8E8", color="#B04A4A"];
+  idx [label="Frame index (SQLite)\nframes | detections | visits | alerts\n+ FTS5 + semantic vectors", fillcolor="#FFF6DD", color="#B08A2E", shape=cylinder];
+  alerts [label="Real-time alerts\n(console / webhook-ready)", fillcolor="#FDE8E8", color="#B04A4A"];
+  logs [label="Event log lines"];
+  qa [label="Analyst agent\nQ&A router + summaries", fillcolor="#EDE7F6", color="#6A4FA5"];
+  llm [label="Optional LangGraph + Groq\nReAct agent (tools = index)", fillcolor="#EDE7F6", color="#6A4FA5", style="rounded,filled,dashed"];
+  user [label="Property owner /\nsecurity operator", shape=oval, fillcolor="#FFFFFF"];
+  tel -> feed; vid -> feed; feed -> per [label="Frame"]; per -> ctx [label="Detections"];
+  ctx -> rules [label="state"]; per -> idx [label="Detections"]; ctx -> idx [label="visits"];
+  rules -> alerts; rules -> idx [label="alerts"]; per -> logs;
+  alerts -> user; logs -> user; idx -> qa; ctx -> llm [label="bounded\nprompt context"]; idx -> llm [label="tools"];
+  qa -> user [label="answers"]; llm -> user [style=dashed];
+}

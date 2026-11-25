@@ -1,0 +1,13 @@
+digraph P {
+  rankdir=TB; fontname="Helvetica"; node [fontname="Helvetica", fontsize=11, shape=box, style="rounded,filled", fillcolor="#EEF3FA", color="#4A6FA5"]; edge [fontname="Helvetica", fontsize=9];
+  s [label="New frame\n(telemetry + caption)", shape=oval, fillcolor="#FFFFFF"];
+  a [label="1. Perceive: parse caption into detections\n(kind, category, entity key, activity, count)"];
+  b [label="2. Update context: registry, dwell timers,\nvisit enter/exit, hourly digest"];
+  c [label="3. Index frame + detections + visits\n(SQLite, FTS5, semantic vector)"];
+  d [label="4. Run all 7 rules"];
+  e [label="5. Collapse: keep most severe alert\nper (entity, zone)", fillcolor="#FDE8E8", color="#B04A4A"];
+  f [label="Within cooldown and\nseverity not higher?", shape=diamond, fillcolor="#FFF6DD", color="#B08A2E"];
+  g [label="Suppress", fillcolor="#EEEEEE", color="#999999"];
+  h [label="Emit alert + persist", fillcolor="#FDE8E8", color="#B04A4A"];
+  s -> a -> b -> c -> d -> e -> f; f -> g [label="yes"]; f -> h [label="no"];
+}

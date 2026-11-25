@@ -1,0 +1,79 @@
+Frame   1 | 00:00 | Main Gate       | alt   27m | batt  72% | Empty driveway, gate closed. No activity.
+Frame   2 | 00:01 | Main Gate       | alt   18m | batt  81% | Person in dark hoodie loitering near main gate, looking at the lock.
+    LOG   Person in dark hoodie loitering at main gate, 00:01.
+    ALERT [HIGH] Person loitering at Main Gate, 00:01.
+Frame   3 | 00:02 | Main Gate       | alt   20m | batt  76% | Person in dark hoodie standing at main gate, checking phone.
+    LOG   Person in dark hoodie standing at main gate, 00:02.
+Frame   4 | 00:03 | Main Gate       | alt   32m | batt  71% | Person in dark hoodie walking away from main gate toward the road.
+    LOG   Person in dark hoodie walking at main gate, 00:03.
+Frame   5 | 00:05 | Perimeter Fence | alt   22m | batt  91% | Fox crossing the lawn near the fence. Nothing else visible.
+    LOG   Fox walking at perimeter fence, 00:05.
+Frame   6 | 00:15 | Garage          | alt   26m | batt  72% | Garage door closed. No activity.
+Frame   7 | 06:30 | Main Gate       | alt   22m | batt  85% | Gate closed, empty driveway. No activity.
+Frame   8 | 07:45 | Main Gate       | alt   21m | batt  85% | Blue Ford F150 enters through main gate.
+    LOG   Blue Ford F150 spotted entering at main gate, 07:45.
+Frame   9 | 07:46 | Garage          | alt   32m | batt  73% | Blue Ford F150 parked at garage, driver exits vehicle.
+    LOG   Blue Ford F150 spotted at garage, 07:46.
+    LOG   Driver getting out of vehicle at garage, 07:46.
+Frame  10 | 08:30 | Main Gate       | alt   18m | batt  87% | Blue Ford F150 leaves through main gate.
+    LOG   Blue Ford F150 spotted leaving at main gate, 08:30.
+Frame  11 | 09:10 | Main Gate       | alt   28m | batt  86% | White delivery van arrives at main gate, courier carrying package.
+    LOG   White Delivery Van spotted entering at main gate, 09:10.
+    LOG   Courier active at main gate, 09:10.
+Frame  12 | 09:14 | Front Door      | alt   25m | batt  87% | Courier in white uniform leaves package at front door.
+    LOG   Courier in white uniform active at front door, 09:14.
+Frame  13 | 09:18 | Main Gate       | alt   30m | batt  77% | White delivery van leaves through main gate.
+    LOG   White Delivery Van spotted leaving at main gate, 09:18.
+Frame  14 | 10:00 | Backyard        | alt   20m | batt  73% | Gardener in green uniform trimming hedge.
+    LOG   Gardener in green uniform active at backyard, 10:00.
+Frame  15 | 11:58 | Main Gate       | alt   24m | batt  93% | Blue Ford F150 enters through main gate.
+    LOG   Blue Ford F150 spotted entering at main gate, 11:58.
+    ALERT [LOW] Blue Ford F150 has entered 2 times today, 11:58.
+Frame  16 | 12:00 | Garage          | alt   30m | batt  92% | Blue Ford F150 parked at garage.
+    LOG   Blue Ford F150 spotted at garage, 12:00.
+Frame  17 | 12:40 | Main Gate       | alt   31m | batt  74% | Blue Ford F150 exits through main gate.
+    LOG   Blue Ford F150 spotted leaving at main gate, 12:40.
+Frame  18 | 14:00 | Parking Lot     | alt   26m | batt  77% | Red Honda Civic plate MH12XY9999 parked in lot, no one visible.
+    LOG   Red Honda Civic spotted at parking lot, 14:00.
+Frame  19 | 14:30 | Perimeter Fence | alt   31m | batt  61% | Neighbouring property visible past the fence line.
+    ALERT [HIGH] Drone outside geofence at (135, 70), 14:30.
+Frame  20 | 14:31 | Perimeter Fence | alt   72m | batt  90% | Wide shot of fence line and trees.
+    ALERT [MEDIUM] Drone altitude 72 m above safe ceiling, 14:31.
+Frame  21 | 16:20 | Perimeter Fence | alt   19m | batt  86% | Person in black jacket climbing over perimeter fence with a ladder.
+    LOG   Person in black jacket climbing at perimeter fence, 16:20.
+    LOG   Ladder spotted at perimeter fence, 16:20.
+    ALERT [CRITICAL] Person climbing at Perimeter Fence (possible intrusion), 16:20.
+    ALERT [HIGH] Suspicious object (ladder) at Perimeter Fence, 16:20.
+Frame  22 | 16:21 | Backyard        | alt   23m | batt  71% | Person in black jacket running toward backyard.
+    LOG   Person in black jacket running at backyard, 16:21.
+    ALERT [MEDIUM] Person running at Backyard, 16:21.
+Frame  23 | 16:22 | Backyard        | alt   18m | batt  93% | Person in black jacket tampering with back door.
+    LOG   Person in black jacket tampering at backyard, 16:22.
+    ALERT [CRITICAL] Person tampering with property at Backyard, 16:22.
+Frame  24 | 16:25 | Main Gate       | alt   23m | batt  73% | Quiet driveway. No activity.
+Frame  25 | 19:00 | Main Gate       | alt   19m | batt  73% | Blue Ford F150 enters through main gate.
+    LOG   Blue Ford F150 spotted entering at main gate, 19:00.
+    ALERT [LOW] Blue Ford F150 has entered 3 times today, 19:00.
+Frame  26 | 19:02 | Garage          | alt   18m | batt  95% | Blue Ford F150 parked at garage.
+    LOG   Blue Ford F150 spotted at garage, 19:02.
+Frame  27 | 22:30 | Main Gate       | alt   25m | batt  18% | Unknown black SUV idling near main gate, no one exits.
+    LOG   Black SUV idling at main gate, 22:30.
+    ALERT [HIGH] Unrecognised Black SUV at Main Gate after hours, 22:30.
+    ALERT [MEDIUM] Drone battery low (18%), 22:30.
+Frame  28 | 22:40 | Main Gate       | alt   20m | batt  17% | Black SUV still idling at main gate.
+    LOG   Black SUV idling at main gate, 22:40.
+Frame  29 | 23:10 | Main Gate       | alt   29m | batt  15% | Black SUV drives away from main gate.
+    LOG   Black SUV spotted leaving at main gate, 23:10.
+    ALERT [MEDIUM] Drone battery low (15%), 23:10.
+Frame  30 | 23:30 | Garage          | alt   21m | batt  84% | Garage door closed. Blue Ford F150 parked. No activity.
+    LOG   Blue Ford F150 spotted at garage, 23:30.
+
+Processed 30 frames -> output/drone.db
+
+=== SUMMARY ===
+Across 30 frames the drone logged 4 vehicle(s) and 5 person profile(s) and raised 12 alert(s); most serious: person climbing at perimeter fence (possible intrusion) at 16:20 (CRITICAL).
+
+- Blue Ford F150 entered 3 times on 2026-11-24.
+- CRITICAL: Person climbing at Perimeter Fence (possible intrusion) (16:20); Person tampering with property at Backyard (16:22)
+- HIGH: Person loitering at Main Gate (00:01); Drone outside geofence at (135, 70) (14:30); Suspicious object (ladder) at Perimeter Fence (16:20); Unrecognised Black SUV at Main Gate after hours (22:30)
+- MEDIUM: Drone altitude 72 m above safe ceiling (14:31); Person running at Backyard (16:21); Drone battery low (18%) (22:30); Drone battery low (15%) (23:10)

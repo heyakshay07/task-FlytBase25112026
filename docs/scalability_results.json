@@ -1,0 +1,42 @@
+{
+  "frames": 50000,
+  "ingest_seconds": 10.42,
+  "frames_per_second": 4800,
+  "alerts": 10617,
+  "db_mb": 17.6,
+  "peak_rss_mb": 210.7,
+  "entities_tracked": 47,
+  "context_chars_at_20/40/60/80/100pct": [
+    2970,
+    2958,
+    2981,
+    2955,
+    2983
+  ],
+  "queries_ms": {
+    "object query: truck (all events)": {
+      "avg_ms": 39.7,
+      "rows": 4397
+    },
+    "time-of-day query: 22:00-05:00": {
+      "avg_ms": 51.0,
+      "rows": 14423
+    },
+    "full-text search: 'hedge'": {
+      "avg_ms": 2.3,
+      "rows": 10
+    },
+    "semantic search: 'break in'": {
+      "avg_ms": 177.7,
+      "rows": 5
+    },
+    "alerts >= CRITICAL": {
+      "avg_ms": 7.2,
+      "rows": 1722
+    },
+    "Q&A: how many times did the truck enter": {
+      "avg_ms": 5.5,
+      "rows": 12521
+    }
+  }
+}
