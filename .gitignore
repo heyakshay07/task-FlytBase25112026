@@ -5,3 +5,6 @@ __pycache__/
 .pytest_cache/
 .pytest_tmp*/
 .env
+.venv/
+videos/*.mp4
+.pytest_verify*/
